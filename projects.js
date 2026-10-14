@@ -12,12 +12,13 @@
      tags      extra little labels shown on the card, e.g. ["AP50"]
      title     project name
      date      shown on the card
-     award     optional. Shows a ribbon on the card.
      cover     the image on the card. Leave the file missing and a
                "photo coming soon" placeholder appears instead.
      coverPosition  optional. Which part of the cover to keep when it's cropped,
                as "left% top%". "50% 50%" is the center; raise the second
                number to show more of the bottom.
+     coverFit  optional. "contain" shows the whole cover with no cropping
+               (good for charts and screenshots).
      summary   one or two sentences for the card
      sections  the full write-up. Each has a heading and an array of paragraphs.
      media     photos/videos/PDFs shown in the project. Types:
@@ -42,7 +43,6 @@ const PROJECTS = [
     tags: ["AP50A"],
     title: "The 5corpion: Precision Calibrated Car",
     date: "Sep – Oct 2025",
-    award: "1st place · 20 teams",
     cover: "assets/projects/calibrated-car/car.jpg",
     coverPosition: "50% 55%",
     summary:
@@ -87,7 +87,6 @@ const PROJECTS = [
     tags: ["AP50A"],
     title: "The Bird Feeder: Rube Goldberg Machine",
     date: "Oct – Dec 2025",
-    award: "Best Engineered · 20 teams",
     cover: "assets/projects/rube-goldberg/machine.jpg",
     summary:
       "A 40 cm cube machine that chains seven physics concepts together (marbles, dominoes, a mousetrap, a pulley, a catapult, and a tube of lentils) to ring a bell.",
@@ -186,8 +185,8 @@ const PROJECTS = [
     tags: ["High School", "Regional Science Fair", "ISEF"],
     title: "Low-Pressure Hydropower Generator",
     date: "Aug 2023 – Mar 2024",
-    cover: "assets/projects/isef-hydropower/generator.jpg",
-    coverPosition: "50% 40%",
+    cover: "assets/projects/isef-hydropower/display.jpg",
+    coverPosition: "50% 18%",
     summary:
       "A small hydro generator for places with no sun and no wind. A repurposed paint-mixer propeller produced about 4 volts. Regional ISEF-affiliated science fair.",
     sections: [
@@ -230,7 +229,8 @@ const PROJECTS = [
     tags: [],
     title: "Task, Time & Life Schedule Organizer",
     date: "Jul 2026 – Ongoing",
-    cover: "assets/projects/life-organizer/cover.jpg",
+    cover: "assets/projects/life-organizer/cover.png",
+    coverFit: "contain",
     summary:
       "A Google Sheets system that gives me high-level stats on where my time goes. I built it with Claude to get ready for a busier sophomore year.",
     sections: [
@@ -295,8 +295,8 @@ const PROJECTS = [
     media: [],
     links: [
       {
-        label: "Watch the mockup demo (Zoom recording)",
-        url: "https://harvard.zoom.us/rec/play/1jeqZjgHHDif4_UbhrexNKbr-A_4esyR8gabv1vnxG769n81XOOTHsxLOxj6x3oeQIgJvV8aoWM78rnm.suCJF-om0eWak_9-?accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&startTime=1791169940000&oldStyle=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fharvard.zoom.us%2Frec%2Fshare%2FhveGrGm6trGeMPf-iH1IZcUq0JjR2aGta6euRop9qlIxR1iiTKHdIProq33I2pW-.NMpuWL51D-5VUxV8%3FstartTime%3D1791169940000",
+        label: "Try the interactive mockup (Snack Track)",
+        url: "https://claude.ai/artifact/BvLFaSbgjbRPvasj1siF5u",
       },
     ],
   },

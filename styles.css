@@ -155,17 +155,6 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; mar
   color: var(--accent-ink); margin: 16px 0 6px;
 }
 .hero__study { font: italic 400 clamp(1.1rem, 2.4vw, 1.35rem)/1.4 var(--serif); color: var(--muted); margin: 0; }
-.hero__tag {
-  display: inline-flex; align-items: center; gap: 8px; margin: 22px 0 0;
-  background: var(--card); padding: 8px 14px;
-  font-size: .82rem; font-weight: 500; box-shadow: var(--shadow);
-}
-.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex: none; position: relative; }
-.dot::after {
-  content: ""; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid var(--accent);
-  animation: pulse 2s var(--ease) infinite;
-}
-@keyframes pulse { from { transform: scale(.6); opacity: 1; } to { transform: scale(1.6); opacity: 0; } }
 
 
 /* ---------- Sections ---------- */
@@ -216,12 +205,6 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; mar
   position: absolute; top: 14px; left: 14px;
   font: 600 .72rem var(--sans); letter-spacing: .06em; text-transform: uppercase;
   padding: 5px 10px; color: #fff; background: var(--cat, var(--accent));
-}
-.card__award {
-  position: absolute; top: 14px; right: 14px;
-  display: flex; align-items: center; gap: 5px;
-  font: 600 .74rem var(--sans); padding: 5px 10px;
-  background: var(--accent); color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,.12);
 }
 
 .card__body { padding: 20px 22px 22px; display: flex; flex-direction: column; flex: 1; }
@@ -288,8 +271,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; mar
 .m__hero img { width: 100%; height: 100%; object-fit: cover; }
 .m__inner { padding: clamp(24px, 5vw, 48px); }
 .m__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 14px; }
-.m__meta .card__cat, .m__meta .card__award { position: static; }
-.m__date { font: 400 .8rem var(--mono); color: var(--muted); margin-left: 4px; }
+.m__meta .card__cat, .m__meta .m__date { font: 400 .8rem var(--mono); color: var(--muted); margin-left: 4px; }
 .m__title { font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: -.01em; margin-bottom: 18px; }
 .m__summary { font: 400 1.15rem/1.55 var(--serif); color: var(--muted); margin: 0 0 32px; font-style: italic; }
 

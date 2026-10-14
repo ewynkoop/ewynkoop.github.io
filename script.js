@@ -71,11 +71,19 @@
     renderCards();
   });
 
+  // Optional per-project cover tweaks from projects.js (coverPosition / coverFit).
+  const coverStyle = (p) => {
+    const rules = [];
+    if (p.coverPosition) rules.push(`object-position:${p.coverPosition}`);
+    if (p.coverFit === "contain") rules.push("object-fit:contain;background:#fff");
+    return rules.length ? ` style="${esc(rules.join(";"))}"` : "";
+  };
+
   const cardHTML = (p, i) => `
     <button class="card cat--${slug(p.category)}" data-id="${esc(p.id)}" style="animation-delay:${i * 60}ms"
             aria-label="Open project: ${esc(p.title)}">
       <div class="card__media">
-        <img src="${esc(p.cover)}" alt="" loading="lazy" data-placeholder="Photo coming soon"${p.coverPosition ? ` style="object-position:${esc(p.coverPosition)}"` : ""}>
+        <img src="${esc(p.cover)}" alt="" loading="lazy" data-placeholder="Photo coming soon"${coverStyle(p)}>
         <span class="card__cat">${esc(p.category)}</span>
       </div>
       <div class="card__body">
@@ -131,11 +139,10 @@
 
     const media = p.media || [];
     content.innerHTML = `
-      <div class="m__hero"><img src="${esc(p.cover)}" alt="" data-placeholder="Cover photo coming soon"${p.coverPosition ? ` style="object-position:${esc(p.coverPosition)}"` : ""}></div>
+      <div class="m__hero"><img src="${esc(p.cover)}" alt="" data-placeholder="Cover photo coming soon"${coverStyle(p)}></div>
       <div class="m__inner">
         <div class="m__meta cat--${slug(p.category)}">
           <span class="card__cat">${esc(p.category)}</span>
-          ${p.award ? `<span class="card__award">🏆 ${esc(p.award)}</span>` : ""}
           ${(p.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join("")}
           <span class="m__date">${esc(p.date)}</span>
         </div>
