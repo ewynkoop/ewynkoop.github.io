@@ -26,6 +26,7 @@
      sections  the full write-up. Each has a heading and an array of paragraphs.
      media     photos/videos/PDFs shown in the project. Types:
                  { type: "image", src: "...", caption: "..." }
+                   add  wide: true  to stretch a photo across the full width
                  { type: "video", src: "...", caption: "..." }   (.mp4 works best)
                    add  wide: false  to a vertical video so it takes one column
                  { type: "youtube", id: "VIDEO_ID", caption: "..." }
@@ -132,7 +133,8 @@ const PROJECTS = [
     tags: ["AP50B"],
     title: "Hungry Hungry Hippos: Electrostatic Magic Trick",
     date: "Feb – Mar 2026",
-    cover: "assets/projects/hungry-hungry-hippos/box.jpg",
+    cover: "assets/projects/hungry-hungry-hippos/hippos.jpg",
+    coverFit: "contain",
     summary:
       "A safe, static-only magic trick for middle schoolers. Rub the lid and the aluminum balls inside start moving without anyone touching them.",
     sections: [
@@ -151,7 +153,7 @@ const PROJECTS = [
         ],
       },
     ],
-    media: [{ type: "image", src: "assets/projects/hungry-hungry-hippos/box.jpg", caption: "Hungry Hungry Hippos" }],
+    media: [{ type: "image", src: "assets/projects/hungry-hungry-hippos/design-notes.jpg", caption: "Design notes: box geometry and the aluminum balls", wide: true }],
     links: [],
   },
 

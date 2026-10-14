@@ -117,7 +117,7 @@
     const cap = m.caption ? `<figcaption>${esc(m.caption)}</figcaption>` : "";
     switch (m.type) {
       case "image":
-        return `<figure><div class="m__frame"><img src="${esc(m.src)}" alt="${esc(m.caption || "")}" loading="lazy" data-placeholder="Photo coming soon"></div>${cap}</figure>`;
+        return `<figure${m.wide ? ' class="is-wide"' : ""}><div class="m__frame"><img src="${esc(m.src)}" alt="${esc(m.caption || "")}" loading="lazy" data-placeholder="Photo coming soon"></div>${cap}</figure>`;
       case "video":
         return `<figure${m.wide === false ? "" : ' class="is-wide"'}><div class="m__frame" data-video="${esc(m.src)}">
                   <video controls playsinline preload="metadata"><source src="${esc(m.src)}"></video>

@@ -154,7 +154,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; mar
   font: 400 .85rem var(--mono); letter-spacing: .08em; text-transform: uppercase;
   color: var(--accent-ink); margin: 16px 0 6px;
 }
-.hero__study { font: italic 400 clamp(1.1rem, 2.4vw, 1.35rem)/1.4 var(--serif); color: var(--muted); margin: 0; }
+.hero__study { font: 400 clamp(1.1rem, 2.4vw, 1.35rem)/1.4 var(--serif); color: var(--muted); margin: 0; }
 
 
 /* ---------- Sections ---------- */
@@ -274,7 +274,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; mar
 .m__meta .card__cat { position: static; }
 .m__date { font: 400 .8rem var(--mono); color: var(--muted); margin-left: 4px; }
 .m__title { font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: -.01em; margin-bottom: 18px; }
-.m__summary { font: 400 1.15rem/1.55 var(--serif); color: var(--muted); margin: 0 0 32px; font-style: italic; }
+.m__summary { font: 400 1.15rem/1.55 var(--serif); color: var(--muted); margin: 0 0 32px; }
 
 .m__section { margin-bottom: 30px; }
 .m__section h3 {
