@@ -71,11 +71,11 @@
     renderCards();
   });
 
-  // Optional per-project cover tweaks from projects.js (coverPosition / coverFit).
+  // Optional per-project cover tweaks from projects.js (coverPosition / coverFit / coverBackground).
   const coverStyle = (p) => {
     const rules = [];
     if (p.coverPosition) rules.push(`object-position:${p.coverPosition}`);
-    if (p.coverFit === "contain") rules.push("object-fit:contain;background:#fff");
+    if (p.coverFit === "contain") rules.push(`object-fit:scale-down;background:${p.coverBackground || "#fff"}`);
     return rules.length ? ` style="${esc(rules.join(";"))}"` : "";
   };
 

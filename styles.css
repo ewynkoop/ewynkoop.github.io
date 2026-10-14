@@ -271,7 +271,8 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; mar
 .m__hero img { width: 100%; height: 100%; object-fit: cover; }
 .m__inner { padding: clamp(24px, 5vw, 48px); }
 .m__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 14px; }
-.m__meta .card__cat, .m__meta .m__date { font: 400 .8rem var(--mono); color: var(--muted); margin-left: 4px; }
+.m__meta .card__cat { position: static; }
+.m__date { font: 400 .8rem var(--mono); color: var(--muted); margin-left: 4px; }
 .m__title { font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: -.01em; margin-bottom: 18px; }
 .m__summary { font: 400 1.15rem/1.55 var(--serif); color: var(--muted); margin: 0 0 32px; font-style: italic; }
 

@@ -18,7 +18,10 @@
                as "left% top%". "50% 50%" is the center; raise the second
                number to show more of the bottom.
      coverFit  optional. "contain" shows the whole cover with no cropping
-               (good for charts and screenshots).
+               and never blows it up past its real size (good for charts,
+               logos, and screenshots).
+     coverBackground  optional. Color behind a "contain" cover, e.g. "#EEF1EA",
+               so the empty space matches the image. Defaults to white.
      summary   one or two sentences for the card
      sections  the full write-up. Each has a heading and an array of paragraphs.
      media     photos/videos/PDFs shown in the project. Types:
@@ -158,7 +161,8 @@ const PROJECTS = [
     tags: ["HUCEG"],
     title: "Collegiate Wind Competition Turbine",
     date: "Ongoing",
-    cover: "assets/projects/huceg-wind/cover.jpg",
+    cover: "assets/projects/huceg-wind/cover.png",
+    coverFit: "contain",
     summary:
       "Designing an optimized wind turbine with the Harvard Undergraduate Clean Energy Group's BUILD team.",
     sections: [
@@ -175,7 +179,7 @@ const PROJECTS = [
         ],
       },
     ],
-    media: [{ type: "image", src: "assets/projects/huceg-wind/cover.jpg", caption: "Photos coming as the build progresses" }],
+    media: [],
     links: [{ label: "HUCEG BUILD", url: "https://www.huceg.org/build" }],
   },
 
@@ -263,7 +267,9 @@ const PROJECTS = [
     tags: ["Startups class"],
     title: "Campus Free-Food Finder: App Mockup",
     date: "October 2026",
-    cover: "assets/projects/free-food-app/cover.jpg",
+    cover: "assets/projects/free-food-app/cover.png",
+    coverFit: "contain",
+    coverBackground: "#EEF1EA",
     summary:
       "A quickly vibe-coded mockup of an app that connects students with club events that have free food, built to test whether there's traction before launching.",
     sections: [
