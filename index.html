@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ellie Wynkoop</title>
-  <meta name="description" content="Ellie Wynkoop: Harvard '29, Applied Math (Engineering) with a secondary in Physics. Projects, experience, and contact.">
-  <meta name="theme-color" content="#f7f1e8">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23c4623f'/><text x='50' y='67' font-size='52' text-anchor='middle' fill='%23fff8ee' font-family='Georgia,serif'>E</text></svg>">
+  <title>Elizabeth Wynkoop</title>
+  <meta name="description" content="Elizabeth Wynkoop: Harvard '29, Applied Math (Engineering) with a secondary in Physics. Projects and contact.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%2314284b'/><text x='50' y='67' font-size='52' text-anchor='middle' fill='%23ffffff' font-family='Georgia,serif'>E</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
@@ -17,14 +17,13 @@
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="nav" id="nav">
-    <a class="nav__brand" href="#top">Ellie Wynkoop</a>
+    <a class="nav__brand" href="#top">Elizabeth Wynkoop</a>
     <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
       <span></span><span></span>
     </button>
     <nav class="nav__links" id="nav-links">
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -35,39 +34,22 @@
     <section class="hero" id="top">
       <div class="hero__grid" aria-hidden="true"></div>
       <div class="wrap hero__inner">
-        <div class="hero__text">
-          <p class="eyebrow">Harvard University · Class of 2029</p>
-          <h1>Hi, I'm Ellie.<br><em>I like building things that work.</em></h1>
-          <p class="hero__lede">
-            Applied Math concentrator focusing on Engineering, with a secondary in Physics.
-            I love learning, problem solving, and anything STEM.
-          </p>
-          <div class="hero__cta">
-            <a class="btn btn--solid" href="#projects">See my projects</a>
-            <a class="btn btn--ghost" href="assets/resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
-          </div>
-          <ul class="hero__stats">
-            <li><strong>2×</strong><span>1st place, AP50<br>project fairs</span></li>
-            <li><strong>20</strong><span>teams per<br>competition</span></li>
-            <li><strong>4 V</strong><span>from my homemade<br>hydro generator</span></li>
-          </ul>
-        </div>
-
         <figure class="hero__photo">
-          <!-- Replace assets/profile.jpg with your photo (square-ish, at least 800px wide) -->
-          <img src="assets/profile.jpg" alt="Ellie Wynkoop" data-placeholder="Profile photo">
-          <figcaption class="hero__tag">
-            <span class="dot"></span> Currently: building a wind turbine with HUCEG
-          </figcaption>
+          <!-- Replace assets/profile.jpg with your photo (square, at least 600px wide) -->
+          <img src="assets/profile.jpg" alt="Elizabeth Wynkoop" data-placeholder="Profile photo">
         </figure>
+        <h1 class="hero__name">Elizabeth Wynkoop</h1>
+        <p class="hero__school">Harvard College · Class of 2029</p>
+        <p class="hero__study">Applied Math, focus in Engineering · Secondary in Physics</p>
+        <p class="hero__tag"><span class="dot"></span> Currently: building a wind turbine with HUCEG</p>
       </div>
     </section>
 
     <section class="section" id="about">
       <div class="wrap about">
-        <h2 class="section__title"><span class="num">01</span>About</h2>
+        <h2 class="section__title">About</h2>
         <div class="about__body">
-          <p class="about__big">
+          <p>
             I grew up in a small, rural town just outside Charlottesville, Virginia, and now I study Applied Math
             at Harvard, with a focus in Engineering and a secondary in Physics.
           </p>
@@ -77,7 +59,7 @@
             I love learning and solving problems.
           </p>
           <p>
-            This past summer I worked on the Product Team at <strong>CollageAI</strong>, an EdTech startup that builds
+            This past summer I worked on the Product Team at CollageAI, an EdTech startup that builds
             active learning environments for students. The platform has been piloted at institutions including
             Harvard, Cornell, and Duke.
           </p>
@@ -85,9 +67,6 @@
             I haven't mapped out the next 30 years of my life, but I'm open to careers in finance, product management,
             consulting, engineering, venture capital, entrepreneurship, and more.
           </p>
-          <ul class="chips" aria-label="Interests">
-            <li>Finance</li><li>Product</li><li>Consulting</li><li>Engineering</li><li>Venture Capital</li><li>Entrepreneurship</li>
-          </ul>
         </div>
       </div>
     </section>
@@ -96,7 +75,7 @@
     <section class="section section--tint" id="projects">
       <div class="wrap">
         <div class="projects__head">
-          <h2 class="section__title"><span class="num">02</span>Projects</h2>
+          <h2 class="section__title">Projects</h2>
           <p class="projects__intro">Builds, recreations, and experiments. Click any card for the full story, photos, and videos.</p>
         </div>
         <div class="filters" role="toolbar" aria-label="Filter projects" id="filters"></div>
@@ -104,47 +83,10 @@
       </div>
     </section>
 
-    <!-- ============ EXPERIENCE ============ -->
-    <section class="section" id="experience">
-      <div class="wrap">
-        <h2 class="section__title"><span class="num">03</span>Experience</h2>
-        <ol class="timeline">
-          <li class="timeline__item">
-            <div class="timeline__when">Summer 2026</div>
-            <div class="timeline__what">
-              <h3>Product Team · CollageAI</h3>
-              <p>EdTech startup building active learning environments for students. The platform has been piloted at Harvard, Cornell, and Duke.</p>
-            </div>
-          </li>
-          <li class="timeline__item">
-            <div class="timeline__when">Ongoing</div>
-            <div class="timeline__what">
-              <h3>BUILD Team · Harvard Undergraduate Clean Energy Group</h3>
-              <p>Designing an optimized wind turbine for the Collegiate Wind Competition: CAD modeling, research, and learning from Electrical Engineering concentrators and faculty.</p>
-            </div>
-          </li>
-          <li class="timeline__item">
-            <div class="timeline__when">2025 – 2029</div>
-            <div class="timeline__what">
-              <h3>Harvard University</h3>
-              <p>A.B. candidate in Applied Mathematics (Engineering focus) with a secondary in Physics. Won 1st place in both AP50A project fairs.</p>
-            </div>
-          </li>
-          <li class="timeline__item">
-            <div class="timeline__when">High school</div>
-            <div class="timeline__what">
-              <h3>Half-Day STEM Program</h3>
-              <p>Accepted sophomore year. Earned an associate-degree level of college STEM credit alongside public high school, and competed in a regional ISEF-affiliated science fair.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
     <!-- ============ CONTACT ============ -->
     <section class="section contact" id="contact">
       <div class="wrap contact__inner">
-        <h2 class="section__title"><span class="num">04</span>Contact</h2>
+        <h2 class="section__title">Contact</h2>
         <p class="contact__big">Let's talk about projects, internships, or anything STEM.</p>
         <div class="contact__grid">
           <a class="contact__card" href="mailto:elliewynkoop@college.harvard.edu">
@@ -165,7 +107,7 @@
   </main>
 
   <footer class="footer">
-    <div class="wrap">© <span id="year"></span> Ellie Wynkoop</div>
+    <div class="wrap">© <span id="year"></span> Elizabeth Wynkoop</div>
   </footer>
 
   <!-- Project detail popup (filled in by script.js) -->

@@ -15,11 +15,15 @@
      award     optional. Shows a ribbon on the card.
      cover     the image on the card. Leave the file missing and a
                "photo coming soon" placeholder appears instead.
+     coverPosition  optional. Which part of the cover to keep when it's cropped,
+               as "left% top%". "50% 50%" is the center; raise the second
+               number to show more of the bottom.
      summary   one or two sentences for the card
      sections  the full write-up. Each has a heading and an array of paragraphs.
      media     photos/videos/PDFs shown in the project. Types:
                  { type: "image", src: "...", caption: "..." }
                  { type: "video", src: "...", caption: "..." }   (.mp4 works best)
+                   add  wide: false  to a vertical video so it takes one column
                  { type: "youtube", id: "VIDEO_ID", caption: "..." }
                  { type: "pdf", src: "...", caption: "..." }
      links     buttons at the bottom: { label: "...", url: "..." }
@@ -35,11 +39,12 @@ const PROJECTS = [
   {
     id: "calibrated-car",
     category: "Engineering",
-    tags: ["AP50A", "Team of 4"],
+    tags: ["AP50A"],
     title: "The 5corpion: Precision Calibrated Car",
     date: "Sep – Oct 2025",
     award: "1st place · 20 teams",
     cover: "assets/projects/calibrated-car/car.jpg",
+    coverPosition: "50% 55%",
     summary:
       "An unpowered car that has to stop at a mystery distance between 1 and 4 m. We used a string as a brake and finished within a few centimeters both rounds.",
     sections: [
@@ -79,7 +84,7 @@ const PROJECTS = [
   {
     id: "rube-goldberg",
     category: "Engineering",
-    tags: ["AP50A", "Team of 4"],
+    tags: ["AP50A"],
     title: "The Bird Feeder: Rube Goldberg Machine",
     date: "Oct – Dec 2025",
     award: "Best Engineered · 20 teams",
@@ -122,7 +127,7 @@ const PROJECTS = [
   {
     id: "hungry-hungry-hippos",
     category: "Engineering",
-    tags: ["AP50B", "Outreach"],
+    tags: ["AP50B"],
     title: "Hungry Hungry Hippos: Electrostatic Magic Trick",
     date: "Feb – Mar 2026",
     cover: "assets/projects/hungry-hungry-hippos/box.jpg",
@@ -151,7 +156,7 @@ const PROJECTS = [
   {
     id: "huceg-wind",
     category: "Engineering",
-    tags: ["HUCEG", "Ongoing"],
+    tags: ["HUCEG"],
     title: "Collegiate Wind Competition Turbine",
     date: "Ongoing",
     cover: "assets/projects/huceg-wind/cover.jpg",
@@ -178,10 +183,11 @@ const PROJECTS = [
   {
     id: "isef-hydropower",
     category: "Engineering",
-    tags: ["Science Fair", "ISEF"],
+    tags: ["High School", "Regional Science Fair", "ISEF"],
     title: "Low-Pressure Hydropower Generator",
     date: "Aug 2023 – Mar 2024",
-    cover: "assets/projects/isef-hydropower/cover.jpg",
+    cover: "assets/projects/isef-hydropower/generator.jpg",
+    coverPosition: "50% 40%",
     summary:
       "A small hydro generator for places with no sun and no wind. A repurposed paint-mixer propeller produced about 4 volts. Regional ISEF-affiliated science fair.",
     sections: [
@@ -207,10 +213,12 @@ const PROJECTS = [
       },
     ],
     media: [
-      { type: "image", src: "assets/projects/isef-hydropower/photo-1.jpg", caption: "" },
-      { type: "image", src: "assets/projects/isef-hydropower/photo-2.jpg", caption: "" },
-      { type: "image", src: "assets/projects/isef-hydropower/photo-3.jpg", caption: "" },
-      { type: "image", src: "assets/projects/isef-hydropower/photo-4.jpg", caption: "" },
+      { type: "image", src: "assets/projects/isef-hydropower/display.jpg", caption: "My display at the regional science fair" },
+      { type: "image", src: "assets/projects/isef-hydropower/generator.jpg", caption: "The finished generator, with the paint-mixer propeller inside" },
+      { type: "image", src: "assets/projects/isef-hydropower/sketch.jpg", caption: "My sketch of the internal setup" },
+      { type: "image", src: "assets/projects/isef-hydropower/test-setup.jpg", caption: "Testing setup: the bucket feeds the generator while a multimeter reads the voltage" },
+      { type: "video", src: "assets/projects/isef-hydropower/generator-video.mp4", caption: "A closer look at the generator", wide: false },
+      { type: "video", src: "assets/projects/isef-hydropower/test-run.mp4", caption: "A test run, pouring water through the system", wide: false },
       { type: "pdf", src: "assets/projects/isef-hydropower/poster.pdf", caption: "My original high school poster board" },
     ],
     links: [],
@@ -219,7 +227,7 @@ const PROJECTS = [
   {
     id: "life-organizer",
     category: "Personal",
-    tags: ["Google Sheets", "Built with Claude"],
+    tags: [],
     title: "Task, Time & Life Schedule Organizer",
     date: "Jul 2026 – Ongoing",
     cover: "assets/projects/life-organizer/cover.jpg",
@@ -252,9 +260,9 @@ const PROJECTS = [
   {
     id: "free-food-app",
     category: "Other",
-    tags: ["Startups class", "Mockup"],
+    tags: ["Startups class"],
     title: "Campus Free-Food Finder: App Mockup",
-    date: "Startups: Idea to Exit",
+    date: "October 2026",
     cover: "assets/projects/free-food-app/cover.jpg",
     summary:
       "A quickly vibe-coded mockup of an app that connects students with club events that have free food, built to test whether there's traction before launching.",
@@ -296,7 +304,7 @@ const PROJECTS = [
   {
     id: "collage-team",
     category: "Other",
-    tags: ["CollageAI", "Ongoing"],
+    tags: ["CollageAI"],
     title: "Collage-Team Prototype for AP50",
     date: "Jun 2026 – Ongoing",
     cover: "assets/projects/collage-team/cover.jpg",

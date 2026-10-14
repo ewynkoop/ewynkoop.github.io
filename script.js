@@ -48,7 +48,7 @@
       links.querySelectorAll("a").forEach((a) => a.classList.toggle("is-active", a.hash === "#" + en.target.id));
     });
   }, { rootMargin: "-45% 0px -50% 0px" });
-  ["about", "projects", "experience", "contact"].forEach((id) => sectionObserver.observe(document.getElementById(id)));
+  ["about", "projects", "contact"].forEach((id) => sectionObserver.observe(document.getElementById(id)));
 
   /* ---------- Project cards ---------- */
   const cardsEl = $("#cards");
@@ -75,9 +75,8 @@
     <button class="card cat--${slug(p.category)}" data-id="${esc(p.id)}" style="animation-delay:${i * 60}ms"
             aria-label="Open project: ${esc(p.title)}">
       <div class="card__media">
-        <img src="${esc(p.cover)}" alt="" loading="lazy" data-placeholder="Photo coming soon">
+        <img src="${esc(p.cover)}" alt="" loading="lazy" data-placeholder="Photo coming soon"${p.coverPosition ? ` style="object-position:${esc(p.coverPosition)}"` : ""}>
         <span class="card__cat">${esc(p.category)}</span>
-        ${p.award ? `<span class="card__award">🏆 ${esc(p.award)}</span>` : ""}
       </div>
       <div class="card__body">
         <div class="card__date">${esc(p.date)}</div>
@@ -112,7 +111,7 @@
       case "image":
         return `<figure><div class="m__frame"><img src="${esc(m.src)}" alt="${esc(m.caption || "")}" loading="lazy" data-placeholder="Photo coming soon"></div>${cap}</figure>`;
       case "video":
-        return `<figure class="is-wide"><div class="m__frame" data-video="${esc(m.src)}">
+        return `<figure${m.wide === false ? "" : ' class="is-wide"'}><div class="m__frame" data-video="${esc(m.src)}">
                   <video controls playsinline preload="metadata"><source src="${esc(m.src)}"></video>
                 </div>${cap}</figure>`;
       case "youtube":
@@ -132,7 +131,7 @@
 
     const media = p.media || [];
     content.innerHTML = `
-      <div class="m__hero"><img src="${esc(p.cover)}" alt="" data-placeholder="Cover photo coming soon"></div>
+      <div class="m__hero"><img src="${esc(p.cover)}" alt="" data-placeholder="Cover photo coming soon"${p.coverPosition ? ` style="object-position:${esc(p.coverPosition)}"` : ""}></div>
       <div class="m__inner">
         <div class="m__meta cat--${slug(p.category)}">
           <span class="card__cat">${esc(p.category)}</span>
@@ -215,6 +214,6 @@
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("is-in"); revealObserver.unobserve(en.target); } });
   }, { threshold: 0.12 });
-  document.querySelectorAll(".section__title, .about__body, .projects__intro, .timeline__item, .contact__big, .contact__card")
+  document.querySelectorAll(".section__title, .about__body, .projects__intro, .contact__big, .contact__card")
     .forEach((el) => { el.classList.add("reveal"); revealObserver.observe(el); });
 })();
