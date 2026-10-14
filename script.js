@@ -221,6 +221,6 @@
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("is-in"); revealObserver.unobserve(en.target); } });
   }, { threshold: 0.12 });
-  document.querySelectorAll(".section__title, .about__body, .projects__intro, .contact__big, .contact__card")
+  document.querySelectorAll(".section__title, .about__body, .projects__intro, .contact__card")
     .forEach((el) => { el.classList.add("reveal"); revealObserver.observe(el); });
 })();
