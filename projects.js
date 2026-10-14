@@ -133,9 +133,7 @@ const PROJECTS = [
     tags: ["AP50B"],
     title: "Hungry Hungry Hippos: Electrostatic Magic Trick",
     date: "Feb – Mar 2026",
-    cover: "assets/projects/hungry-hungry-hippos/box.jpg",
-    coverFit: "contain",
-    coverBackground: "#c4c5c2",
+    cover: "assets/projects/hungry-hungry-hippos/box-cover.jpg",
     summary:
       "A safe, static-only magic trick for middle schoolers. Rub the lid and the aluminum balls inside start moving without anyone touching them.",
     sections: [
